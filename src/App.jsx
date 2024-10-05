@@ -1,7 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import student from "./assets/student.jpg";
+import student from "./assets/student.png";
 import classroom from "./assets/classroom.png";
 import "./App.css";
 
