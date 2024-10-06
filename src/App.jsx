@@ -243,6 +243,39 @@ function App() {
         <li>Printouts to display website resources and materials</li>
       </ul>
       <img src={classroom} style={{ width: "20rem", aspectRatio: "1/1" }} />
+
+      <br /><br />
+      <div>
+    <h1>GOOD HEALTH AND WELL BEING</h1>
+<p>
+    WORLD CHANGERS
+    <br />
+    <b>"A Journey of Good health and well being"</b>
+    {/* Your story here */}
+    <br />
+    <br />
+    &copy; GOOD HEALTH AND WELL BEING
+  </p>
+  <footer
+    style={{
+      backgroundColor: '#f2f2f2',
+      padding: '20px',
+      textAlign: 'center',
+    }}
+  >
+    <ul
+      style={{
+        listStyle: 'none',
+        margin: '0',
+        padding: '0',
+        backgroundColor: 'rgb(248, 142, 4)',
+      }}
+    >
+      {/* Add footer links here */}
+    </ul>
+  </footer>
+</div>
+
     </div>
   );
 }
