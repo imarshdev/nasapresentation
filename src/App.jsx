@@ -113,7 +113,7 @@ function App() {
         Disease, Germs, Injuries, Mental Health, World Health Organization
       </p>
       <img src={student} style={{ width: "10rem", aspectRatio: "1/1" }} />
-      <p>Aims and outcomes: </p>
+      <h3>Aims and outcomes: </h3>
       <ul style={{ textAlign: "start" }}>
         <li>To define health. </li>
         <li>To recall different types of diseases and ill-health. </li>
@@ -122,26 +122,6 @@ function App() {
         </li>
         <li>To understand and recall solutions to Good Health for All</li>
       </ul>
-
-      <h4>Curriculum links: </h4>
-      <p style={{ textAlign: "start" }}>
-        • Physical health and mental well-being: ‘…pupils being taught about the
-        benefits and importance of daily exercise, good nutrition and sufficient
-        sleep, and giving pupils the language and knowledge to understand the
-        normal range of emotions that everyone experiences’.
-      </p>
-      <p style={{ textAlign: "start" }}>
-        • Science: ‘…find out and describe the basic needs of animals, including
-        humans, for survival (water, food, and air)’ and ‘describe the
-        importance for humans of exercise, eating the right amounts of different
-        types of food, and hygiene…’{" "}
-      </p>
-      <p style={{ textAlign: "start" }}>
-        • English: ‘learn the conventions of different types of writing (for
-        example, the greeting in letters, a diary written in the first person or
-        the use of presentational devices such as numbering and headings in
-        instructions)…’{" "}
-      </p>
       <br />
       <h3>Lesson Plan 1: What makes people sick? </h3>
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
