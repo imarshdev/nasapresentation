@@ -69,7 +69,7 @@ function App() {
       >
         <span>
           <a
-            style={{ color: "black" }}
+            style={{ color: "black", textDecoration: "underline" }}
           >
             Home
           </a>
