@@ -87,7 +87,7 @@ function App() {
             style={{ color: "black" }}
             href="https://findahealthcenter.hrsa.gov/"
           >
-            Healthy Center
+            Health Center
           </a>
         </span>
         <span>
