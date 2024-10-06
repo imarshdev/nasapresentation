@@ -108,10 +108,7 @@ function App() {
         </span>
       </div>
       <h2>SDG 3: Good Health and Well-Being: Lesson Plan</h2>
-      <p>
-        Key Words: <br />
-        Disease, Germs, Injuries, Mental Health, World Health Organization
-      </p>
+
       <img src={student} style={{ width: "10rem", aspectRatio: "1/1" }} />
       <h3>Aims and outcomes: </h3>
       <ul style={{ textAlign: "start" }}>
