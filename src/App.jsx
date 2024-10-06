@@ -70,9 +70,8 @@ function App() {
         <span>
           <a
             style={{ color: "black" }}
-            href="index.html"
           >
-            PHM for astronauts
+            Home
           </a>
         </span>
         <span>
