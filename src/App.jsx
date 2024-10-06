@@ -67,10 +67,38 @@ function App() {
           alignItems: "center",
         }}
       >
-        <span>Home</span>
-        <span>About</span>
-        <span>Help Center</span>
-        <span>Contact Us</span>
+        <span>
+          <a
+            style={{ color: "black" }}
+            href="index.html"
+          >
+            PHM for astronauts
+          </a>
+        </span>
+        <span>
+          <a
+            style={{ color: "black" }}
+            href="https://www.papers.phmsociety.org/index.php/phmconf/article/view/2333"
+          >
+            PHM for astronauts
+          </a>
+        </span>
+        <span>
+          <a
+            style={{ color: "black" }}
+            href="https://findahealthcenter.hrsa.gov/"
+          >
+            Healthy Center
+          </a>
+        </span>
+        <span>
+          <a
+            style={{ color: "black" }}
+            href="https://www.pharmacymentor.com/pharmacy-google-maps-ads/"
+          >
+            Pharmacy 
+          </a>
+        </span>
       </div>
       <h2>SDG 3: Good Health and Well-Being: Lesson Plan</h2>
       <p>
@@ -244,38 +272,38 @@ function App() {
       </ul>
       <img src={classroom} style={{ width: "20rem", aspectRatio: "1/1" }} />
 
-      <br /><br />
+      <br />
+      <br />
       <div>
-    <h1>GOOD HEALTH AND WELL BEING</h1>
-<p>
-    WORLD CHANGERS
-    <br />
-    <b>"A Journey of Good health and well being"</b>
-    {/* Your story here */}
-    <br />
-    <br />
-    &copy; GOOD HEALTH AND WELL BEING
-  </p>
-  <footer
-    style={{
-      backgroundColor: '#f2f2f2',
-      padding: '20px',
-      textAlign: 'center',
-    }}
-  >
-    <ul
-      style={{
-        listStyle: 'none',
-        margin: '0',
-        padding: '0',
-        backgroundColor: 'rgb(248, 142, 4)',
-      }}
-    >
-      {/* Add footer links here */}
-    </ul>
-  </footer>
-</div>
-
+        <h1>GOOD HEALTH AND WELL BEING</h1>
+        <p>
+          WORLD CHANGERS
+          <br />
+          <b>"A Journey of Good health and well being"</b>
+          {/* Your story here */}
+          <br />
+          <br />
+          &copy; GOOD HEALTH AND WELL BEING
+        </p>
+        <footer
+          style={{
+            backgroundColor: "#f2f2f2",
+            padding: "20px",
+            textAlign: "center",
+          }}
+        >
+          <ul
+            style={{
+              listStyle: "none",
+              margin: "0",
+              padding: "0",
+              backgroundColor: "rgb(248, 142, 4)",
+            }}
+          >
+            {/* Add footer links here */}
+          </ul>
+        </footer>
+      </div>
     </div>
   );
 }
