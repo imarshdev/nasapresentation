@@ -98,6 +98,14 @@ function App() {
             Pharmacy 
           </a>
         </span>
+        <span>
+          <a
+            style={{ color: "black" }}
+            href="mailto:joshbrison41@gmail.com"
+          >
+            Contact Us
+          </a>
+        </span>
       </div>
       <h2>SDG 3: Good Health and Well-Being: Lesson Plan</h2>
       <p>
