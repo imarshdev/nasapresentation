@@ -3,7 +3,7 @@ export default function Banner() {
   const filterStyle = {
     width: "20%",
     height: "80%",
-    borderRight: "solid 1px #ccc",
+    borderRight: "solid .1px #00000020",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -18,43 +18,31 @@ export default function Banner() {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "aliceblue",
-        backgroundColor: "#111111",
         position: "relative",
+        marginTop: "5rem",
       }}
     >
-      <div
-        style={{
-          width: "100%",
-          height: "55vh",
-          position: "absolute",
-          top: 0,
-          zIndex: 1,
-          background:
-            "linear-gradient(to bottom, #111111 50%, transparent 100%)",
-        }}
-      ></div>
-      <img src={mountain} style={{ width: "95%" }} />
-      <div
-        style={{ position: "absolute", color: "#fff", top: "10%", zIndex: 3 }}
-      >
+      <img
+        src={mountain}
+        style={{ width: "95%", height: "80vh", borderRadius: "20px" }}
+      />
+      <div style={{ position: "absolute", zIndex: 3, left: "5%" }}>
         <h1
           style={{
-            fontSize: "6rem",
-            WebkitTextStroke: ".3px darkgreen",
-            fontWeight: "bolder",
-            fontFamily: "helvetica"
+            fontSize: "5rem",
+            color: "#fff",
+            textAlign: "start",
           }}
         >
           WAGAGAI TOURS & TRAVEL
         </h1>
-        <p>Slogan Goes Here</p>
       </div>
+      <br />
       <div
         style={{
           width: "98%",
-          height: "20vh",
-          backgroundColor: "#fff",
-          position: "absolute",
+          height: "25vh",
+          backgroundColor: "#ccc",
           bottom: 0,
           borderRadius: "20px",
           overflow: "hidden",
@@ -64,21 +52,43 @@ export default function Banner() {
       >
         <div style={filterStyle}>
           <span style={{ width: "80%", textAlign: "start" }}>Destinations</span>
-          <span style={{ width: "80%", textAlign: "end" }}>city or Region</span>
+          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
+            <option className="option-style" value="city or Region">City</option>
+            <option className="option-style" value="city or Region">Region</option>
+            <option className="option-style" value="city or Region">Country</option>
+          </select>
         </div>
         <div style={filterStyle}>
           <span style={{ width: "80%", textAlign: "start" }}>All Activity</span>
-          <span style={{ width: "80%", textAlign: "end" }}>city or Region</span>
+          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
+            <option className="option-style" value="city or Region">Outdoor Activities</option>
+            <option className="option-style" value="city or Region">Cultural Experiences</option>
+            <option className="option-style" value="city or Region">Water Activities</option>
+            <option className="option-style" value="city or Region">Urban Delights</option>
+            <option className="option-style" value="city or Region">Adventure Sports</option>
+          </select>
         </div>
         <div style={filterStyle}>
           <span style={{ width: "80%", textAlign: "start" }}>
             Departure Date
           </span>
-          <span style={{ width: "80%", textAlign: "end" }}>city or Region</span>
+          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
+            <option className="option-style" value="city or Region">December 26th, 2024</option>
+            <option className="option-style" value="city or Region">December 27th, 2024</option>
+            <option className="option-style" value="city or Region">December 28th, 2024</option>
+            <option className="option-style" value="city or Region">December 29th, 2024</option>
+            <option className="option-style" value="city or Region">December 30th, 2024</option>
+          </select>
         </div>
         <div style={filterStyle}>
           <span style={{ width: "80%", textAlign: "start" }}>Guests</span>
-          <span style={{ width: "80%", textAlign: "end" }}>city or Region</span>
+          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
+            <option className="option-style" value="city or Region">1</option>
+            <option className="option-style" value="city or Region">2-4</option>
+            <option className="option-style" value="city or Region">5-7</option>
+            <option className="option-style" value="city or Region">8-10</option>
+            <option className="option-style" value="city or Region">10+</option>
+          </select>
         </div>
         <div
           style={{
@@ -99,9 +109,10 @@ export default function Banner() {
               justifyContent: "center",
               alignItems: "center",
               borderRadius: "50px",
+              color: "#fff",
             }}
           >
-            Search
+            Apply
           </span>
         </div>
       </div>

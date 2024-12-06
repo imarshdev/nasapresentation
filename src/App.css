@@ -5,10 +5,28 @@
   padding: 0;
   text-align: center;
 }
-.navitem{
+
+.navitem {
   transition: all ease-in-out .3s;
   cursor: pointer;
 }
-.navitem:hover{
+
+.navitem:hover {
   background-color: darkgreen;
+  color: #fff;
+}
+
+.option-style {
+  height: "5rem";
+  background-color: transparent;
+  border: none;
+}
+
+.select-style{
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+}
+.select-style:focus{
+  outline: none;
 }

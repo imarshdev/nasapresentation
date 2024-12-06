@@ -8,9 +8,8 @@ export default function Navbar() {
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    backgroundColor: "#111111",
+    backgroundColor: "#fff",
     zIndex: 9,
-    color: "#fff"
   };
   const navItemStyle = {
     width: "23%",
@@ -30,10 +29,9 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          backgroundColor: "#222222",
-          color: "#fff",
+          backgroundColor: "aliceblue",
           borderRadius: "50px",
-          border: "solid .5px #333333"
+          border: "solid .5px #cccccc50",
         }}
       >
         <p className="navitem" style={navItemStyle}>
@@ -49,7 +47,22 @@ export default function Navbar() {
           Destinations
         </p>
       </span>
-      <p>Search</p>
+      <p
+        style={{
+          width: "10%",
+          textAlign: "start",
+          backgroundColor: "orange",
+          height: "50%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: "50px",
+          color: "#fff",
+          cursor: "pointer"
+        }}
+      >
+        Search
+      </p>
       <p>MENU</p>
     </div>
   );
