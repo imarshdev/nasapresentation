@@ -3,7 +3,7 @@ import antelopes from "../../assets/misc/antelopes.png";
 import boat from "../../assets/misc/boat.png";
 import mountain from "../../assets/misc/mountain.png";
 
-export default function Items() {
+export default function Items({ isMobile }) {
   const images = [
     {
       phrase:
@@ -21,14 +21,14 @@ export default function Items() {
   ];
   const containerStyle = {
     width: "100%",
-    height: "30vh",
+    height: isMobile ? "20vh" : "30vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
   };
   const carouselOuterStyle = {
-    height: "30vh",
+    height: isMobile ? "20vh" : "30vh",
     width: "100%",
     overflowX: "hidden", // Hide scrollbar
     position: "relative",
@@ -43,9 +43,9 @@ export default function Items() {
   };
   const carouselItemStyle = {
     flex: "0 0 auto",
-    width: "25rem",
-    height: "20vh",
-    marginLeft: "1rem",
+    width: isMobile ? "90%" : "25rem",
+    height: isMobile ? "15vh" : "20vh",
+    margin: isMobile ? "5%" : "1rem",
     borderRadius: "20px",
     overflow: "hidden",
     display: "flex",
@@ -70,7 +70,11 @@ export default function Items() {
               >
                 <span className="phrase-text">{image.phrase}</span>
                 <span className="phrase-text-2">
-                  Learn More <IoIosArrowForward size={24} style={{paddingLeft: "10px"}}/>
+                  Learn More{" "}
+                  <IoIosArrowForward
+                    size={24}
+                    style={{ paddingLeft: "10px" }}
+                  />
                 </span>
               </div>
               <img

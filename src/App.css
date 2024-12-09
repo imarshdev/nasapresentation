@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   min-width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-align: center;
 }
@@ -39,13 +39,16 @@
 
 .font-item {
   font-family: wagagai;
-  font-size: 7rem;
   color: #fff;
   font-weight: bolder;
 }
 
 .p-sidebar-header {
   display: none;
+}
+
+.p-tabview-panels{
+  padding: 1.25rem 0;
 }
 
 .text:focus {

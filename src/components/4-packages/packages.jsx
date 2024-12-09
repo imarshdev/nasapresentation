@@ -1,15 +1,15 @@
 import React from "react";
 import { TabView, TabPanel } from "primereact/tabview";
-import noimage from "../../assets/noimage.jpg";
+import noimage from "../../assets/noimage.avif";
 import { CiStar } from "react-icons/ci";
 import { MdConnectingAirports } from "react-icons/md";
 
-export default function Packages() {
-  // Define styles
+export default function Packages({ isMobile }) {
+  // Define responsive styles
   const headingStyle = {
     width: "100%",
-    textAlign: "start",
-    padding: "0 20px",
+    textAlign: isMobile ? "center" : "start",
+    padding: isMobile ? "10px" : "0 20px",
     color: "green",
   };
 
@@ -23,12 +23,13 @@ export default function Packages() {
     display: "flex",
     gap: "1rem",
     whiteSpace: "nowrap",
+    paddingLeft: "1.25rem",
   };
 
   const cardStyle = {
-    minWidth: "20rem",
-    height: "25rem",
-    backgroundColor: "pink",
+    minWidth: isMobile ? "17rem" : "20rem",
+    height: isMobile ? "19rem" : "25rem",
+    backgroundColor: "#fff",
     display: "flex",
     flexDirection: "column",
     justifyContent: "start",
@@ -39,50 +40,64 @@ export default function Packages() {
     border: "solid 1px #ccc",
     overflow: "hidden",
   };
+
   const spanStyle = {
     padding: "1rem",
     textAlign: "start",
+    fontSize: isMobile ? "12px" : "14px",
   };
+
   const spanStyle2 = {
     padding: "0 1rem",
     textAlign: "end",
     width: "100%",
+    fontSize: isMobile ? "12px" : "14px",
   };
 
   return (
     <div className="card">
       <h2 style={headingStyle}>
-        <b>Explore Stays in Popular Packages !</b>
+        <b>Explore Stays in Popular Packages!</b>
       </h2>
-      <TabView style={{ padding: "0 10px" }}>
+      <TabView style={{ padding: isMobile ? "0px" : "0 10px" }}>
         <TabPanel header="Beach">
           <div style={tabContainerWrapperStyle} className="hide-scrollbar">
             <div style={tabContainerStyle}>
               {Beach.map((location, index) => (
                 <div key={index} style={cardStyle}>
-                  <img src={noimage} style={{ height: "45%", width: "100%" }} />
+                  <img
+                    src={noimage}
+                    style={{
+                      height: "45%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                    alt="Location"
+                  />
                   <span style={spanStyle}>
                     <b>{location.name}</b>
                     <br />
                     {location.location}
                     <br />
-                    <span style={{ fontSize: "12px" }}>
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
                       <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
                       Excellent (19)
                     </span>
                     <br />
-                    <span style={{ fontSize: "12px" }}>
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
                       <MdConnectingAirports style={{ marginRight: "10px" }} />
-                      Entebbe(EBB) - Mombassa (MBA)
+                      Entebbe (EBB) - Mombasa (MBA)
                     </span>
                   </span>
                   <span style={spanStyle2}>
                     <b>$530 / Ugx 1,961,000</b>
                     <br />
-                    <span style={{ fontSize: "12px" }}>per traveller</span>
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      per traveller
+                    </span>
                     <br />
-                    <span style={{ fontSize: "12px" }}>
-                      Mon, Jan 6 - Thu, Jan 9 (3 night)
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      Mon, Jan 6 - Thu, Jan 9 (3 nights)
                     </span>
                   </span>
                 </div>
@@ -90,38 +105,49 @@ export default function Packages() {
             </div>
           </div>
         </TabPanel>
+        {/* Repeat for other tabs */}
         <TabPanel header="Culture">
           <div style={tabContainerWrapperStyle} className="hide-scrollbar">
             <div style={tabContainerStyle}>
               {Culture.map((location, index) => (
                 <div key={index} style={cardStyle}>
-                <img src={noimage} style={{ height: "45%", width: "100%" }} />
-                <span style={spanStyle}>
-                  <b>{location.name}</b>
-                  <br />
-                  {location.location}
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
-                    Excellent (19)
+                  <img
+                    src={noimage}
+                    style={{
+                      height: "45%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                    alt="Location"
+                  />
+                  <span style={spanStyle}>
+                    <b>{location.name}</b>
+                    <br />
+                    {location.location}
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
+                      Excellent (19)
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <MdConnectingAirports style={{ marginRight: "10px" }} />
+                      Entebbe (EBB) - Mombasa (MBA)
+                    </span>
                   </span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <MdConnectingAirports style={{ marginRight: "10px" }} />
-                    Entebbe(EBB) - Mombassa (MBA)
+                  <span style={spanStyle2}>
+                    <b>$530 / Ugx 1,961,000</b>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      per traveller
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      Mon, Jan 6 - Thu, Jan 9 (3 nights)
+                    </span>
                   </span>
-                </span>
-                <span style={spanStyle2}>
-                  <b>$530 / Ugx 1,961,000</b>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>per traveller</span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    Mon, Jan 6 - Thu, Jan 9 (3 night)
-                  </span>
-                </span>
-              </div>
-            ))}
+                </div>
+              ))}
             </div>
           </div>
         </TabPanel>
@@ -130,33 +156,43 @@ export default function Packages() {
             <div style={tabContainerStyle}>
               {Ski.map((location, index) => (
                 <div key={index} style={cardStyle}>
-                <img src={noimage} style={{ height: "45%", width: "100%" }} />
-                <span style={spanStyle}>
-                  <b>{location.name}</b>
-                  <br />
-                  {location.location}
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
-                    Excellent (19)
+                  <img
+                    src={noimage}
+                    style={{
+                      height: "45%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                    alt="Location"
+                  />
+                  <span style={spanStyle}>
+                    <b>{location.name}</b>
+                    <br />
+                    {location.location}
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
+                      Excellent (19)
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <MdConnectingAirports style={{ marginRight: "10px" }} />
+                      Entebbe (EBB) - Mombasa (MBA)
+                    </span>
                   </span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <MdConnectingAirports style={{ marginRight: "10px" }} />
-                    Entebbe(EBB) - Mombassa (MBA)
+                  <span style={spanStyle2}>
+                    <b>$530 / Ugx 1,961,000</b>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      per traveller
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      Mon, Jan 6 - Thu, Jan 9 (3 nights)
+                    </span>
                   </span>
-                </span>
-                <span style={spanStyle2}>
-                  <b>$530 / Ugx 1,961,000</b>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>per traveller</span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    Mon, Jan 6 - Thu, Jan 9 (3 night)
-                  </span>
-                </span>
-              </div>
-            ))}
+                </div>
+              ))}
             </div>
           </div>
         </TabPanel>
@@ -165,33 +201,43 @@ export default function Packages() {
             <div style={tabContainerStyle}>
               {Family.map((location, index) => (
                 <div key={index} style={cardStyle}>
-                <img src={noimage} style={{ height: "45%", width: "100%" }} />
-                <span style={spanStyle}>
-                  <b>{location.name}</b>
-                  <br />
-                  {location.location}
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
-                    Excellent (19)
+                  <img
+                    src={noimage}
+                    style={{
+                      height: "45%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                    alt="Location"
+                  />
+                  <span style={spanStyle}>
+                    <b>{location.name}</b>
+                    <br />
+                    {location.location}
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
+                      Excellent (19)
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <MdConnectingAirports style={{ marginRight: "10px" }} />
+                      Entebbe (EBB) - Mombasa (MBA)
+                    </span>
                   </span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <MdConnectingAirports style={{ marginRight: "10px" }} />
-                    Entebbe(EBB) - Mombassa (MBA)
+                  <span style={spanStyle2}>
+                    <b>$530 / Ugx 1,961,000</b>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      per traveller
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      Mon, Jan 6 - Thu, Jan 9 (3 nights)
+                    </span>
                   </span>
-                </span>
-                <span style={spanStyle2}>
-                  <b>$530 / Ugx 1,961,000</b>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>per traveller</span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    Mon, Jan 6 - Thu, Jan 9 (3 night)
-                  </span>
-                </span>
-              </div>
-            ))}
+                </div>
+              ))}
             </div>
           </div>
         </TabPanel>
@@ -200,33 +246,43 @@ export default function Packages() {
             <div style={tabContainerStyle}>
               {Wellness_And_Relaxation.map((location, index) => (
                 <div key={index} style={cardStyle}>
-                <img src={noimage} style={{ height: "45%", width: "100%" }} />
-                <span style={spanStyle}>
-                  <b>{location.name}</b>
-                  <br />
-                  {location.location}
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
-                    Excellent (19)
+                  <img
+                    src={noimage}
+                    style={{
+                      height: "45%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                    alt="Location"
+                  />
+                  <span style={spanStyle}>
+                    <b>{location.name}</b>
+                    <br />
+                    {location.location}
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <CiStar style={{ marginRight: "10px" }} />5 stars - 8.8/10
+                      Excellent (19)
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      <MdConnectingAirports style={{ marginRight: "10px" }} />
+                      Entebbe (EBB) - Mombasa (MBA)
+                    </span>
                   </span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    <MdConnectingAirports style={{ marginRight: "10px" }} />
-                    Entebbe(EBB) - Mombassa (MBA)
+                  <span style={spanStyle2}>
+                    <b>$530 / Ugx 1,961,000</b>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      per traveller
+                    </span>
+                    <br />
+                    <span style={{ fontSize: isMobile ? "10px" : "12px" }}>
+                      Mon, Jan 6 - Thu, Jan 9 (3 nights)
+                    </span>
                   </span>
-                </span>
-                <span style={spanStyle2}>
-                  <b>$530 / Ugx 1,961,000</b>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>per traveller</span>
-                  <br />
-                  <span style={{ fontSize: "12px" }}>
-                    Mon, Jan 6 - Thu, Jan 9 (3 night)
-                  </span>
-                </span>
-              </div>
-            ))}
+                </div>
+              ))}
             </div>
           </div>
         </TabPanel>
