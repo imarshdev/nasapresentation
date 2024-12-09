@@ -38,7 +38,7 @@ export default function Banner() {
       <div
         style={{
           width: "98%",
-          height: "25vh",
+          height: "20vh",
           backgroundColor: "#ccc",
           bottom: 0,
           borderRadius: "20px",

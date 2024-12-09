@@ -47,3 +47,7 @@
 .p-sidebar-header {
   display: none;
 }
+
+.text:focus {
+  outline: none;
+}
