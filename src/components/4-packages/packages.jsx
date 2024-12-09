@@ -27,8 +27,8 @@ export default function Packages({ isMobile }) {
   };
 
   const cardStyle = {
-    minWidth: isMobile ? "17rem" : "20rem",
-    height: isMobile ? "19rem" : "25rem",
+    minWidth: isMobile ? "20rem" : "20rem",
+    height: isMobile ? "23rem" : "25rem",
     backgroundColor: "#fff",
     display: "flex",
     flexDirection: "column",

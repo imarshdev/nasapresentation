@@ -27,12 +27,6 @@ export default function Items({ isMobile }) {
     justifyContent: "space-between",
     alignItems: "center",
   };
-  const carouselOuterStyle = {
-    height: isMobile ? "20vh" : "30vh",
-    width: "100%",
-    overflowX: "hidden", // Hide scrollbar
-    position: "relative",
-  };
   const carouselInnerStyle = {
     display: "flex",
     height: "100%",
@@ -53,38 +47,33 @@ export default function Items({ isMobile }) {
 
   return (
     <div style={containerStyle}>
-      <div style={carouselOuterStyle}>
-        <div style={carouselInnerStyle} className="hide-scrollbar">
-          {images.map((image, key) => (
-            <div style={carouselItemStyle} key={key}>
-              <div
-                style={{
-                  width: "50%",
-                  height: "100%",
-                  backgroundColor: "yellow",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "start",
-                  flexDirection: "column",
-                }}
-              >
-                <span className="phrase-text">{image.phrase}</span>
-                <span className="phrase-text-2">
-                  Learn More{" "}
-                  <IoIosArrowForward
-                    size={24}
-                    style={{ paddingLeft: "10px" }}
-                  />
-                </span>
-              </div>
-              <img
-                src={image.image}
-                alt={image.phrase}
-                style={{ width: "50%", height: "100%", objectFit: "cover" }}
-              />
+      <div style={carouselInnerStyle} className="hide-scrollbar">
+        {images.map((image, key) => (
+          <div style={carouselItemStyle} key={key}>
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                backgroundColor: "yellow",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "start",
+                flexDirection: "column",
+              }}
+            >
+              <span className="phrase-text">{image.phrase}</span>
+              <span className="phrase-text-2">
+                Learn More{" "}
+                <IoIosArrowForward size={24} style={{ paddingLeft: "10px" }} />
+              </span>
             </div>
-          ))}
-        </div>
+            <img
+              src={image.image}
+              alt={image.phrase}
+              style={{ width: "50%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

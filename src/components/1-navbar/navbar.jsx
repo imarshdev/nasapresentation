@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import logo1 from "../../assets/logo1.png";
 import { MdMenuOpen } from "react-icons/md";
@@ -6,13 +6,38 @@ import Overlay from "../overlay/overlay";
 
 export default function Navbar({ isMobile }) {
   const [visible, setVisible] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Scrolling down
+        setShowNavbar(false);
+      } else {
+        // Scrolling up
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   // Styles separated into objects
   const containerStyle = {
     width: "100%",
     height: "5rem",
     position: "fixed",
-    top: 0,
+    top: showNavbar ? 0 : "-5rem", // Hide navbar when scrolling down
+    transition: "top 0.3s ease-in-out",
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -21,15 +46,8 @@ export default function Navbar({ isMobile }) {
   };
 
   const containerStyle2 = {
-    width: "100%",
-    height: "5rem",
-    position: "fixed",
-    top: 0,
-    display: "flex",
+    ...containerStyle,
     justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "#fff",
-    zIndex: 9,
     padding: "0 1rem",
   };
 

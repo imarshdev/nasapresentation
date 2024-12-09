@@ -58,19 +58,21 @@
 .phrase-text {
   text-align: start;
   padding: 0 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .phrase-text-2 {
   text-align: start;
   padding: 0 20px;
-  font-size: 13px;
+  font-size: 12px;
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
-
+.p-tabview-title{
+  color: green;
+}
 .m-0 {
   height: 40vh;
   display: flex;
