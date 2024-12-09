@@ -1,4 +1,7 @@
-import mountain from "../../assets/mountain.png";
+import { CiLocationArrow1, CiViewTimeline } from "react-icons/ci";
+import mountain from "../../assets/backdrop.png";
+import { GiCornerFlag } from "react-icons/gi";
+import { FaPeopleRobbery } from "react-icons/fa6";
 export default function Banner() {
   const filterStyle = {
     width: "20%",
@@ -24,18 +27,12 @@ export default function Banner() {
     >
       <img
         src={mountain}
-        style={{ width: "95%", height: "80vh", borderRadius: "20px" }}
+        style={{ width: "95%", height: "95vh", borderRadius: "20px" }}
       />
-      <div style={{ position: "absolute", zIndex: 3, left: "5%" }}>
-        <h1
-          style={{
-            fontSize: "5rem",
-            color: "#fff",
-            textAlign: "start",
-          }}
-        >
-          WAGAGAI TOURS & TRAVEL
-        </h1>
+      <div style={{ position: "absolute", zIndex: 3, width: "85%" }}>
+        <span>
+          <b className="font-item">WAGAGAI TOURS & TRAVEL</b>
+        </span>
       </div>
       <br />
       <div
@@ -51,43 +48,132 @@ export default function Banner() {
         }}
       >
         <div style={filterStyle}>
-          <span style={{ width: "80%", textAlign: "start" }}>Destinations</span>
-          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
-            <option className="option-style" value="city or Region">City</option>
-            <option className="option-style" value="city or Region">Region</option>
-            <option className="option-style" value="city or Region">Country</option>
+          <b
+            style={{
+              width: "80%",
+              textAlign: "start",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <CiLocationArrow1 style={{ marginRight: "1rem" }} />
+            Destinations
+          </b>
+          <select
+            className="select-style"
+            style={{ width: "80%", textAlign: "end" }}
+          >
+            <option className="option-style" value="city or Region">
+              City
+            </option>
+            <option className="option-style" value="city or Region">
+              Region
+            </option>
+            <option className="option-style" value="city or Region">
+              Country
+            </option>
           </select>
         </div>
         <div style={filterStyle}>
-          <span style={{ width: "80%", textAlign: "start" }}>All Activity</span>
-          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
-            <option className="option-style" value="city or Region">Outdoor Activities</option>
-            <option className="option-style" value="city or Region">Cultural Experiences</option>
-            <option className="option-style" value="city or Region">Water Activities</option>
-            <option className="option-style" value="city or Region">Urban Delights</option>
-            <option className="option-style" value="city or Region">Adventure Sports</option>
+          <b
+            style={{
+              width: "80%",
+              textAlign: "start",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <GiCornerFlag style={{ marginRight: "1rem" }} />
+            All Activity
+          </b>
+          <select
+            className="select-style"
+            style={{ width: "80%", textAlign: "end" }}
+          >
+            <option className="option-style" value="city or Region">
+              Choose Activities
+            </option>
+            <option className="option-style" value="city or Region">
+              Outdoor Activities
+            </option>
+            <option className="option-style" value="city or Region">
+              Cultural Experiences
+            </option>
+            <option className="option-style" value="city or Region">
+              Water Activities
+            </option>
+            <option className="option-style" value="city or Region">
+              Urban Delights
+            </option>
+            <option className="option-style" value="city or Region">
+              Adventure Sports
+            </option>
           </select>
         </div>
         <div style={filterStyle}>
-          <span style={{ width: "80%", textAlign: "start" }}>
+          <b
+            style={{
+              width: "80%",
+              textAlign: "start",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <CiViewTimeline style={{ marginRight: "1rem" }} />
             Departure Date
-          </span>
-          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
-            <option className="option-style" value="city or Region">December 26th, 2024</option>
-            <option className="option-style" value="city or Region">December 27th, 2024</option>
-            <option className="option-style" value="city or Region">December 28th, 2024</option>
-            <option className="option-style" value="city or Region">December 29th, 2024</option>
-            <option className="option-style" value="city or Region">December 30th, 2024</option>
+          </b>
+          <select
+            className="select-style"
+            style={{ width: "80%", textAlign: "end" }}
+          >
+            <option className="option-style" value="city or Region">
+              December 26th, 2024
+            </option>
+            <option className="option-style" value="city or Region">
+              December 27th, 2024
+            </option>
+            <option className="option-style" value="city or Region">
+              December 28th, 2024
+            </option>
+            <option className="option-style" value="city or Region">
+              December 29th, 2024
+            </option>
+            <option className="option-style" value="city or Region">
+              December 30th, 2024
+            </option>
           </select>
         </div>
         <div style={filterStyle}>
-          <span style={{ width: "80%", textAlign: "start" }}>Guests</span>
-          <select className="select-style" style={{ width: "80%", textAlign: "end" }}>
-            <option className="option-style" value="city or Region">1</option>
-            <option className="option-style" value="city or Region">2-4</option>
-            <option className="option-style" value="city or Region">5-7</option>
-            <option className="option-style" value="city or Region">8-10</option>
-            <option className="option-style" value="city or Region">10+</option>
+          <span
+            style={{
+              width: "80%",
+              textAlign: "start",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <FaPeopleRobbery style={{ marginRight: "1rem" }} />
+            Guests
+          </span>
+          <select
+            className="select-style"
+            style={{ width: "80%", textAlign: "end" }}
+          >
+            <option className="option-style" value="city or Region">
+              1
+            </option>
+            <option className="option-style" value="city or Region">
+              2-4
+            </option>
+            <option className="option-style" value="city or Region">
+              5-7
+            </option>
+            <option className="option-style" value="city or Region">
+              8-10
+            </option>
+            <option className="option-style" value="city or Region">
+              10+
+            </option>
           </select>
         </div>
         <div

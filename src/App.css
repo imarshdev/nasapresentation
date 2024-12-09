@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+@font-face {
+  font-family: wagagai;
+  src: url(./assets/MontserratExtrabold-VGO60.ttf);
+}
+
 .navitem {
   transition: all ease-in-out .3s;
   cursor: pointer;
@@ -22,11 +27,23 @@
   border: none;
 }
 
-.select-style{
+.select-style {
   height: 2rem;
   background-color: transparent;
   border: none;
 }
-.select-style:focus{
+
+.select-style:focus {
   outline: none;
+}
+
+.font-item {
+  font-family: wagagai;
+  font-size: 7rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.p-sidebar-header {
+  display: none;
 }
