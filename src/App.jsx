@@ -7,9 +7,11 @@ import Banner, { FilterContainer } from "./components/2-banner/banner";
 import Packages from "./components/4-packages/packages";
 import Items from "./components/3-locationItems/items";
 import Details from "./components/5-details/details";
+import AboutUs from "./components/5-aboutUs/about";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false); // Track mobile screen size
+  const [page, setPage] = useState("home");
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,13 +30,25 @@ function App() {
 
   return (
     <PrimeReactProvider>
-      <div style={{ width: "100%", height: "auto", boxSizing: "border-box" }}>
-        <Navbar isMobile={isMobile} /> {/* Pass isMobile prop to Navbar */}
-        <Banner isMobile={isMobile} />
-        <FilterContainer isMobile={isMobile} />
-        <Items isMobile={isMobile} />
-        <Packages isMobile={isMobile} />
-        <Details isMobile={isMobile} />
+      <div
+        style={{
+          width: "100%",
+          height: "auto",
+          boxSizing: "border-box",
+        }}
+      >
+        <Navbar isMobile={isMobile} page={page} setPage={setPage} />{" "}
+        {/* Pass isMobile prop to Navbar */}
+        {page === "home" && (
+          <>
+            <Banner isMobile={isMobile} />
+            <FilterContainer isMobile={isMobile} />
+            <Items isMobile={isMobile} />
+            <Packages isMobile={isMobile} />
+            <Details isMobile={isMobile} />
+          </>
+        )}
+        {page === "about" && <AboutUs isMobile={isMobile} />}
       </div>
     </PrimeReactProvider>
   );

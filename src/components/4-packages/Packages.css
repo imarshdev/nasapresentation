@@ -1,0 +1,15 @@
+.tab-container {
+    display: flex;
+    gap: 1rem;
+    white-space: nowrap;
+    padding-left: 1.25rem;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    justify-content: baseline;
+    bottom: 0;
+  }
+  
+  .tab-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Edge */
+  }

@@ -4,7 +4,7 @@ import logo1 from "../../assets/logo1.png";
 import { MdMenuOpen } from "react-icons/md";
 import Overlay from "../overlay/overlay";
 
-export default function Navbar({ isMobile }) {
+export default function Navbar({ isMobile, page, setPage }) {
   const [visible, setVisible] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -41,7 +41,7 @@ export default function Navbar({ isMobile }) {
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#5cbdb9",
     zIndex: 9,
   };
 
@@ -51,14 +51,17 @@ export default function Navbar({ isMobile }) {
     padding: "0 1rem",
   };
 
-  const navItemStyle = {
+  const navItemStyle = (currentPage) => ({
     width: "23%",
     height: "85%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: "50px",
-  };
+    backgroundColor: page === currentPage ? "darkgreen" : "transparent",
+    color: page === currentPage ? "#fff" : "#000",
+    cursor: "pointer",
+  });
 
   const navSpanStyle = {
     width: "60%",
@@ -83,6 +86,7 @@ export default function Navbar({ isMobile }) {
     color: "#fff",
     cursor: "pointer",
   };
+
   const searchButtonStyle2 = {
     width: "35%",
     textAlign: "start",
@@ -117,16 +121,32 @@ export default function Navbar({ isMobile }) {
           <></>
         ) : (
           <span style={navSpanStyle}>
-            <p className="navitem" style={navItemStyle}>
+            <p
+              className="navitem"
+              style={navItemStyle("home")}
+              onClick={() => setPage("home")}
+            >
               Home
             </p>
-            <p className="navitem" style={navItemStyle}>
+            <p
+              className="navitem"
+              style={navItemStyle("about")}
+              onClick={() => setPage("about")}
+            >
               About
             </p>
-            <p className="navitem" style={navItemStyle}>
+            <p
+              className="navitem"
+              style={navItemStyle("tours")}
+              onClick={() => setPage("tours")}
+            >
               Tours
             </p>
-            <p className="navitem" style={navItemStyle}>
+            <p
+              className="navitem"
+              style={navItemStyle("destinations")}
+              onClick={() => setPage("destinations")}
+            >
               Destinations
             </p>
           </span>

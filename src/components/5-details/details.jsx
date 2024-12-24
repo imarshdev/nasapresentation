@@ -1,5 +1,6 @@
 import { AiFillSchedule } from "react-icons/ai";
 import { IoIosChatbubbles, IoIosPricetags } from "react-icons/io";
+import FadeInView from "../../assets/fadein/fadein";
 
 export default function Details({ isMobile }) {
   // Define styles
@@ -34,31 +35,39 @@ export default function Details({ isMobile }) {
   return (
     <div style={containerStyle}>
       <h2 style={headingStyle}>
-        <b>See it, feel it, love it - We bring you closer</b>
+        <FadeInView>
+          <b>See it, feel it, love it - We bring you closer</b>
+        </FadeInView>
       </h2>
       <span style={spanStyle}>
-        <IoIosChatbubbles size={iconSize} />
-        <br />
-        <span>
-          See what others are saying - Real reviews from fellow travelers help
-          you make the best choice.
-        </span>
+        <FadeInView delay={"1s"}>
+          <IoIosChatbubbles size={iconSize} />
+          <br />
+          <span>
+            See what others are saying - Real reviews from fellow travelers help
+            you make the best choice.
+          </span>
+        </FadeInView>
       </span>
       <span style={spanStyle}>
-        <AiFillSchedule size={iconSize} />
-        <br />
-        <span>
-          Change your mind anytime - Most bookings allow free cancellations up
-          to 24 hours.
-        </span>
+        <FadeInView delay={"2s"}>
+          <AiFillSchedule size={iconSize} />
+          <br />
+          <span>
+            Change your mind anytime - Most bookings allow free cancellations up
+            to 24 hours.
+          </span>
+        </FadeInView>
       </span>
       <span style={spanStyle}>
-        <IoIosPricetags size={iconSize} />
-        <br />
-        <span>
-          Travel Smart - We offer the best prices so you can enjoy without
-          spending a fortune.
-        </span>
+        <FadeInView delay={"3s"}>
+          <IoIosPricetags size={iconSize} />
+          <br />
+          <span>
+            Travel Smart - We offer the best prices so you can enjoy without
+            spending a fortune.
+          </span>
+        </FadeInView>
       </span>
     </div>
   );

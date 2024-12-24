@@ -31,13 +31,14 @@ export default function Items({ isMobile }) {
     display: "flex",
     height: "100%",
     overflowX: "scroll", // Enable scrolling functionality
+    overflowY: "hidden",
     scrollbarWidth: "none", // For Firefox (hide scrollbar)
     msOverflowStyle: "none", // For IE/Edge (hide scrollbar)
     alignItems: "center",
   };
   const carouselItemStyle = {
     flex: "0 0 auto",
-    width: isMobile ? "90%" : "25rem",
+    width: isMobile ? "90%" : "23rem",
     height: isMobile ? "15vh" : "20vh",
     margin: isMobile ? "5%" : "1rem",
     borderRadius: "20px",
@@ -49,7 +50,7 @@ export default function Items({ isMobile }) {
     <div style={containerStyle}>
       <div style={carouselInnerStyle} className="hide-scrollbar">
         {images.map((image, key) => (
-          <div style={carouselItemStyle} key={key}>
+          <div className="item" style={carouselItemStyle} key={key}>
             <div
               style={{
                 width: "50%",
