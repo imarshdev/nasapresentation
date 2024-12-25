@@ -167,7 +167,12 @@ export default function Navbar({ isMobile, page, setPage }) {
           <MdMenuOpen size={24} />
         </p>
       </div>
-      <Overlay visible={visible} setVisible={setVisible} isMobile={isMobile} />
+      <Overlay
+        visible={visible}
+        setVisible={setVisible}
+        isMobile={isMobile}
+        setPage={setPage}
+      />
     </>
   );
 }

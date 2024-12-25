@@ -85,7 +85,7 @@ const AboutUs = ({ isMobile }) => {
             bookings!
           </p>
           <p style={{ fontSize: "14px", color: "#555" }}>
-            Email: info@wagagaitours.com | Phone: +256 123 456 789
+            Email: info@wagagaitours.com | Phone: +256 740 053 621
           </p>
         </div>
       </FadeInView>
