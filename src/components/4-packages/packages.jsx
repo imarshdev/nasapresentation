@@ -52,7 +52,7 @@ export default function Packages({ isMobile }) {
     fontSize: isMobile ? "16px" : "18px",
     fontWeight: "bold",
   };
-  
+
   const spanStyle = {
     padding: "1rem",
     textAlign: "end",
@@ -95,7 +95,7 @@ export default function Packages({ isMobile }) {
                 <span style={spanStyle2}>
                   {truncateText(item.description, 450)}
                 </span>
-                <span style={spanStyle}>Learn More</span>
+                <span style={spanStyle}>See Packages</span>
               </div>
             ))}
           </div>
