@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import logo1 from "../../assets/logo1.png";
 import { MdMenuOpen } from "react-icons/md";
@@ -6,42 +6,18 @@ import Overlay from "../overlay/overlay";
 
 export default function Navbar({ isMobile, page, setPage }) {
   const [visible, setVisible] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scrolling down
-        setShowNavbar(false);
-      } else {
-        // Scrolling up
-        setShowNavbar(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
 
   // Styles separated into objects
   const containerStyle = {
     width: "100%",
-    height: "5rem",
+    height: "4rem",
     position: "fixed",
-    top: showNavbar ? 0 : "-5rem", // Hide navbar when scrolling down
-    transition: "top 0.3s ease-in-out",
+    top: 0, // Keep navbar at the top at all times
+    transition: "top 0.3s ease-in-out", // Optional, can be removed if no transition needed
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    backgroundColor: "#5cbdb9",
+    backgroundColor: "#fff",
     zIndex: 9,
   };
 
@@ -101,13 +77,13 @@ export default function Navbar({ isMobile, page, setPage }) {
   };
 
   const menuButtonStyle = {
-    width: "50px",
-    height: "50px",
+    height: "60%",
+    aspectRatio: "1/1",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     border: "solid .5px #ccc",
-    borderRadius: "30px",
+    borderRadius: "50%",
     cursor: "pointer",
   };
 
@@ -154,7 +130,7 @@ export default function Navbar({ isMobile, page, setPage }) {
 
         {isMobile ? (
           <p style={menuButtonStyle}>
-            <CiSearch size={24} />
+            <CiSearch size={20} />
           </p>
         ) : (
           <p style={isMobile ? searchButtonStyle2 : searchButtonStyle}>
@@ -164,7 +140,7 @@ export default function Navbar({ isMobile, page, setPage }) {
         )}
 
         <p style={menuButtonStyle} onClick={() => setVisible(true)}>
-          <MdMenuOpen size={24} />
+          <MdMenuOpen size={20} />
         </p>
       </div>
       <Overlay
