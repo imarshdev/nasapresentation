@@ -55,7 +55,7 @@ export default function Items({ isMobile }) {
               style={{
                 width: "50%",
                 height: "100%",
-                backgroundColor: "yellow",
+                backgroundColor: "lightblue",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "start",

@@ -1,8 +1,9 @@
-import { CiLocationArrow1, CiViewTimeline } from "react-icons/ci";
+import { CiLocationArrow1, CiLocationOn, CiViewTimeline } from "react-icons/ci";
 import mountain from "../../assets/backdrop.png";
 import { GiCornerFlag } from "react-icons/gi";
 import { FaPeopleRobbery } from "react-icons/fa6";
 import FadeInView from "../../assets/fadein/fadein";
+import { BiCalendarEvent } from "react-icons/bi";
 
 export default function Banner({ isMobile }) {
   // Styles
@@ -19,7 +20,7 @@ export default function Banner({ isMobile }) {
 
   const imageStyle = {
     width: "95%",
-    height: isMobile ? "40vh" : "95vh", // Adjust height based on isMobile
+    height: isMobile ? "30vh" : "75vh", // Adjust height based on isMobile
     borderRadius: "20px",
   };
 
@@ -54,40 +55,47 @@ export default function Banner({ isMobile }) {
 export function FilterContainer({ isMobile }) {
   const filterContainerStyle = {
     width: "90vw",
-    height: isMobile ? "50vh" : "20vh",
+    height: "15vh",
     backgroundColor: "#fff",
-    bottom: 0,
-    borderRadius: "20px",
-    overflow: "hidden",
+    borderRadius: isMobile ? "20px" : "50px",
     display: "flex",
-    alignItems: "center",
-    flexDirection: isMobile ? "column" : "row", // Stack filters on mobile
     margin: "0 5%",
     boxSizing: "border-box",
     marginTop: "-5rem",
-    position: "relative",
     zIndex: 4,
-    paddingTop: "1rem",
+    boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.3)",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  };
+  const filterContainerStyle2 = {
+    width: "90vw",
+    height: "7vh",
+    backgroundColor: "#fff",
+    borderRadius: "50px",
+    display: "flex",
+    margin: "0 5%",
+    boxSizing: "border-box",
+    marginTop: "-5rem",
+    zIndex: 4,
+    boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.3)",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
   };
 
   const filterStyle = {
-    width: isMobile ? "100%" : "20%", // Full width on mobile
-    height: "80%",
+    width: isMobile ? "100%" : "25%", // Full width on mobile
+    height: isMobile ? "auto" : "100%", // Full width on mobile
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column",
-    borderRight: !isMobile ? "solid 0.1px #00000020" : "none", // Remove border on mobile
-  };
-
-  const selectStyle = {
-    width: "80%",
-    textAlign: isMobile ? "start" : "end",
+    flexDirection: "row",
   };
 
   const applyButtonStyle = {
     width: isMobile ? "100%" : "20%",
-    height: "80%",
+    height: isMobile ? "auto" : "100%", // Full width on mobile
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -104,124 +112,100 @@ export function FilterContainer({ isMobile }) {
     borderRadius: "50px",
     color: "#fff",
   };
+
+  const spanStyle = {
+    padding: "1rem",
+    textAlign: "start",
+    width: "100%",
+    fontSize: isMobile ? "12px" : "14px",
+    fontWeight: "bold",
+  };
   return (
-    <FadeInView style={{ width: "90%" }}>
-      <div style={filterContainerStyle}>
-        <div style={filterStyle}>
-          <b
-            style={{
-              width: "80%",
-              textAlign: "start",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <CiLocationArrow1 style={{ marginRight: "1rem" }} />
-            Destinations
-          </b>
-          <select className="select-style" style={selectStyle}>
-            <option className="option-style">City</option>
-            <option className="option-style">Region</option>
-            <option className="option-style">Country</option>
-          </select>
-        </div>
-        <div style={filterStyle}>
-          <b
-            style={{
-              width: "80%",
-              textAlign: "start",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <GiCornerFlag style={{ marginRight: "1rem" }} />
-            All Activity
-          </b>
-          <select className="select-style" style={selectStyle}>
-            <option className="option-style" value="city or Region">
-              Choose Activities
-            </option>
-            <option className="option-style" value="city or Region">
-              Outdoor Activities
-            </option>
-            <option className="option-style" value="city or Region">
-              Cultural Experiences
-            </option>
-            <option className="option-style" value="city or Region">
-              Water Activities
-            </option>
-            <option className="option-style" value="city or Region">
-              Urban Delights
-            </option>
-            <option className="option-style" value="city or Region">
-              Adventure Sports
-            </option>
-          </select>
-        </div>
-        <div style={filterStyle}>
-          <b
-            style={{
-              width: "80%",
-              textAlign: "start",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <CiViewTimeline style={{ marginRight: "1rem" }} />
-            Departure Date
-          </b>
-          <select className="select-style" style={selectStyle}>
-            <option className="option-style" value="city or Region">
-              December 26th, 2024
-            </option>
-            <option className="option-style" value="city or Region">
-              December 27th, 2024
-            </option>
-            <option className="option-style" value="city or Region">
-              December 28th, 2024
-            </option>
-            <option className="option-style" value="city or Region">
-              December 29th, 2024
-            </option>
-            <option className="option-style" value="city or Region">
-              December 30th, 2024
-            </option>
-          </select>
-        </div>
-        <div style={filterStyle}>
-          <span
-            style={{
-              width: "80%",
-              textAlign: "start",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <FaPeopleRobbery style={{ marginRight: "1rem" }} />
-            Guests
-          </span>
-          <select className="select-style" style={selectStyle}>
-            <option className="option-style" value="city or Region">
-              1
-            </option>
-            <option className="option-style" value="city or Region">
-              2-4
-            </option>
-            <option className="option-style" value="city or Region">
-              5-7
-            </option>
-            <option className="option-style" value="city or Region">
-              8-10
-            </option>
-            <option className="option-style" value="city or Region">
-              10+
-            </option>
-          </select>
-        </div>
-        <div style={applyButtonStyle}>
-          <span style={applyButtonTextStyle}>Apply</span>
-        </div>
-      </div>
-    </FadeInView>
+    <>
+      {isMobile ? (
+        <FadeInView style={{ width: "50%" }}>
+          <div style={filterContainerStyle2}>
+            <div style={filterStyle}>
+              <CiLocationOn size={isMobile ? 24 : 28} strokeWidth={1} />
+              <input
+                type="text"
+                placeholder="Where to ?"
+                style={{
+                  outline: "none",
+                  border: "none",
+                  width: "70%",
+                  paddingLeft: "10px",
+                  fontSize: isMobile ? "22px" : "24px",
+                  fontWeight: "bold",
+                }}
+              />
+            </div>
+          </div>
+        </FadeInView>
+      ) : (
+        <FadeInView style={{ width: "50%" }}>
+          <div style={filterContainerStyle}>
+            <div style={filterStyle}>
+              <input
+                type="text"
+                placeholder="Where to ?"
+                style={{
+                  outline: "none",
+                  border: "none",
+                  width: "70%",
+                  paddingLeft: "10px",
+                  fontSize: isMobile ? "22px" : "24px",
+                  fontWeight: "bold",
+                }}
+              />
+              <CiLocationOn size={isMobile ? 24 : 28} strokeWidth={1} />
+            </div>
+            {isMobile ? (
+              <></>
+            ) : (
+              <div
+                style={{
+                  width: "1px",
+                  height: "80%",
+                  backgroundColor: "#cccccc",
+                }}
+              ></div>
+            )}
+            <div style={filterStyle}>
+              <input
+                type="date"
+                placeholder="When ?"
+                style={{
+                  outline: "none",
+                  border: "none",
+                  width: "70%",
+                  paddingLeft: "10px",
+                  fontSize: isMobile ? "22px" : "24px",
+                  fontWeight: "bold",
+                }}
+              />
+            </div>
+            <div style={filterStyle}>
+              <input
+                type="text"
+                placeholder="Activity"
+                style={{
+                  outline: "none",
+                  border: "none",
+                  width: "70%",
+                  paddingLeft: "10px",
+                  fontSize: isMobile ? "22px" : "24px",
+                  fontWeight: "bold",
+                }}
+              />
+              <CiLocationOn size={isMobile ? 24 : 28} strokeWidth={1} />
+            </div>
+            <div style={applyButtonStyle}>
+              <span style={applyButtonTextStyle}>Apply</span>
+            </div>
+          </div>
+        </FadeInView>
+      )}
+    </>
   );
 }

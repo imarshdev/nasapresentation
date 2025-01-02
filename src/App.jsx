@@ -8,6 +8,7 @@ import Packages from "./components/4-packages/packages";
 import Items from "./components/3-locationItems/items";
 import Details from "./components/5-details/details";
 import AboutUs from "./components/5-aboutUs/about";
+import ContactBanner from "./components/7-contactUs/contact";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false); // Track mobile screen size
@@ -46,6 +47,7 @@ function App() {
             <Items isMobile={isMobile} />
             <Packages isMobile={isMobile} />
             <Details isMobile={isMobile} />
+            <ContactBanner isMobile={isMobile} />
           </>
         )}
         {page === "about" && <AboutUs isMobile={isMobile} />}
