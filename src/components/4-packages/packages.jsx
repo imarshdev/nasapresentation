@@ -32,7 +32,7 @@ export default function Packages({ isMobile }) {
 
   const cardStyle = {
     width: isMobile ? "90vw" : "30vw",
-    height: isMobile ? "70vh" : "85vh",
+    height: isMobile ? "70vh" : "105vh",
     backgroundColor: "#fff",
     display: "flex",
     flexDirection: "column",
@@ -43,6 +43,7 @@ export default function Packages({ isMobile }) {
     borderRadius: "8px",
     border: "solid 1px #ccc",
     overflow: "hidden",
+    position: "relative",
   };
 
   const spanStylehead = {
@@ -59,6 +60,8 @@ export default function Packages({ isMobile }) {
     width: "100%",
     fontSize: isMobile ? "12px" : "14px",
     fontWeight: "bold",
+    position: "absolute",
+    bottom: 0,
   };
 
   const spanStyle2 = {
@@ -92,20 +95,18 @@ export default function Packages({ isMobile }) {
                   style={{ height: "45%", width: "100%" }}
                 />
                 <span style={spanStylehead}>{item.name}</span>
-                <span style={spanStyle2}>
-                  {truncateText(item.description, 450)}
-                </span>
+                <span style={spanStyle2}>{item.description}</span>
                 <span style={spanStyle}>See Packages</span>
               </div>
             ))}
           </div>
         </TabPanel>
-        <TabPanel header="Family">
+        <TabPanel header="Explore East Africa">
           <div>
             <p>hello</p>
           </div>
         </TabPanel>
-        <TabPanel header="Wellness & Relaxation">
+        <TabPanel header="International">
           <div>
             <p>hello</p>
           </div>
@@ -119,55 +120,55 @@ const PackageItems = [
   {
     name: "Queen Elizabeth National Park",
     description:
-      "Uganda’s most popular and diverse conservation area, Queen Elizabeth National Park enjoys a fabulous setting on the western rift valley floor, surrounded by lakes, escarpments and snow-capped Rwenzori mountain. A variety of habitats, including grassland, acacia woodland, forest, wetland and open water, sustains a wide range of mammals while the park’s 604 bird species is a quite remarkable tally for protected area covering less than 2000km2.",
+      "Queen Elizabeth National Park is Uganda’s most popular and diverse conservation area. It is located on the western rift valley floor, surrounded by breathtaking lakes, escarpments, and the snow-capped Rwenzori Mountains. The park boasts a variety of habitats, including grasslands, acacia woodlands, forests, wetlands, and open water. These ecosystems sustain an impressive array of wildlife, including a wide range of mammals and a remarkable 604 bird species. This makes it one of the most biodiverse parks in the region, offering visitors a chance to experience Uganda’s rich natural heritage.",
     image: elizabeth,
   },
   {
-    name: "Rwenzori Mountains National Park.",
+    name: "Rwenzori Mountains National Park",
     description:
-      "Africa’s highest mountain range, the 5,109m Rwenzori - Mountains of the moon is a montane wonderland. The trails to the snow peaks following glacier – carved valleys filled with fantastically colored mosses and rare Afro-alpine plants that include giant forms of lobelias, heathers and groundsels. Expeditions use a chain of basic huts and campsites to ascend the mountain from trailheads at Kilembe, Mihunga and Katebwa. Though the peaks can be climbed, the main attraction is the opportunity to spend days exploring a stunning montane wilderness inhabited by the rare Afromontane botany peculiar to East Africa’s highest mountains. Visitors can also take shorter, day walks to look for birds and primates in the forests on the lower contours of the national park.",
+      "Rwenzori Mountains National Park is home to Africa’s highest mountain range, famously known as the 'Mountains of the Moon.' The 5,109m peaks are a montane wonderland. Visitors can explore trails that lead to snow-capped summits, glacier-carved valleys, and vibrant moss-covered landscapes filled with rare Afro-alpine plants. Expeditions are supported by basic huts and campsites, allowing adventurers to ascend from trailheads at Kilembe, Mihunga, and Katebwa. While climbing the peaks is possible, the true allure lies in exploring the stunning montane wilderness and its unique flora and fauna.",
     image: rwenzori,
   },
   {
     name: "Mt. Elgon National Park",
     description:
-      "The 1,145km2 Mount Elgon National Park protects the higher slopes of Mount Elgon, an extinct volcano, on the Uganda-Kenya border. The Mountain, which measures 80km in diameter, once towered above Kilimanjaro’s current 5900m. Though now reduced to 4321m, still rises 3000m above the hot, dusty plains of Karamoja to provide a cool respite for humans and a refuge for flora and fauna. Tourist activities on the mountain cater for various levels of ambition. Visitors can extend hikes, requiring a minimum of 3 days, to reach the summits which lie along the jagged rim on a giant caldera, 8km across. Less demandingly, visitors can take day/half day walks through forest on the lower edge of the park or simply relax in resorts overlooking a chain of delightful waterfalls just outside the park at Sipi.",
+      "Mt. Elgon National Park spans an impressive 1,145km2, protecting the higher slopes of the extinct Mount Elgon volcano. Straddling the Uganda-Kenya border, this park offers a cool respite with its towering 4,321m peak. The mountain’s vast size, measuring 80km in diameter, creates a unique environment that supports a diverse array of flora and fauna. Visitors can embark on multi-day hikes to the summit or enjoy shorter walks through lush forests, taking in the scenic waterfalls and diverse wildlife. It’s a haven for nature lovers and adventurers alike.",
     image: elgon,
   },
   {
     name: "Bwindi Impenetrable National Park",
     description:
-      "One of the Africa’s oldest forests – being one of the few that predate the arid conditions of the last ice age – the 325km2 Bwindi impenetrable has carpeted the margin of the Albertine Rift Valley for some 25,000 years. During this time, it has accumulated a remarkable biodiversity. Species counts include 350 birds, 310 butterflies, 200 trees, 51 reptiles, 88 moths and 120 mammals. The latter includes several primates, among them chimpanzees, L’Hoest monkey, and the star of the Impenetrable show: the mountain Gorilla. The global population of this endangered ape numbers just 800, half of which leave in Bwindui and the remainder on the nearby Virunga",
+      "Bwindi Impenetrable National Park is one of Africa’s oldest and most biologically diverse forests. Spanning 325km2, this ancient forest has existed for over 25,000 years, accumulating a rich biodiversity. It is home to 350 bird species, 310 butterflies, 200 trees, 51 reptiles, 88 moths, and 120 mammals. The park’s most famous residents are the endangered mountain gorillas, with half of the global population found here. Visitors can embark on gorilla tracking adventures, exploring the dense forest and encountering these majestic creatures in their natural habitat.",
     image: bwindi,
   },
   {
     name: "Mgahinga Gorilla National Park",
     description:
-      "Though uganda’s smallest park covers just 38km2, it forms part of a far larger, transboundary protected area that protects wildlife and habitats on the Virunga volcanoes in Uganda, Rwanda and DRC. Mgahinga gorilla enjoys a magnificient setting on the northern slopes of the three of the Virunga’s six extinct cones; Mts.Muhuvura, Gahinga and Sabinyo. The park is home to the two rare primates, mountain gorillas and golden monkeys, both of which can be tracked through their forest habitat. The volcanic peaks can be climbed; the 4127m Muhuvura provides a stunning 3600 regional panorama while Sabinyo’s highest peak offers the rare privilege of standing over 3600m high whilst in the three countries at once. A range of habitats, including forest, bamboo and moorland, support a wealth of birdlife including the beautiful Rwenzori turaco.  On the lower comtours, visitors can follow the Batwa Trail with Batwa (pigmy) guides to learn about traditional forest life before descending into the Garama Cave, historically the home of the Batwa King, for an unforgattable perfomance of Music and dance.",
+      "Mgahinga Gorilla National Park, although Uganda’s smallest park at just 38km2, is part of a larger transboundary conservation area protecting the Virunga volcanoes. The park is situated on the northern slopes of three extinct volcanic cones: Mts. Muhuvura, Gahinga, and Sabinyo. It is renowned for its population of mountain gorillas and golden monkeys. Visitors can track these rare primates, climb the volcanic peaks for panoramic views, and explore diverse habitats, including bamboo forests and moorlands. The park also offers cultural experiences through the Batwa Trail.",
     image: mgahinga,
   },
   {
     name: "Murchison Falls National Park",
     description:
-      "Uganda’s largestprotected area is a 5000km2 expanse formed by Murchison Falls NP and the contigous Karuma and Bugungu wildlife reserves. The Nile traverses this wilderness, dividing grasslands roamed by big game on the northern bank from bush and forest inhabited by birds and primates on the southern side. `the centerpiece is the river’s eruption through a narrow gorge at Murchison Falls; a spectacle that has captivated visitors since the explorer Samuel Baker added the feature to the map in 2864. The boat trip to the Falls, past hippos and crocodiles, is an essential activity, as is a game drive across the grassy Buligi peninsula to the banks of the river. The park also has much to interest birders. The iconic shoebillinhabits swampy islands along the river while rae and ‘ristricted range’ congo overspills can be checked off in southernly Kaniyo Pabidi Forest. Visitors can also track habituated chimpanzees at this site.",
+      "Murchison Falls National Park is Uganda’s largest protected area, encompassing 5,000km2 of stunning wilderness. The Nile River traverses the park, creating the dramatic Murchison Falls, where the river explodes through a narrow gorge. The park is home to diverse wildlife, including elephants, lions, and hippos. Visitors can enjoy boat trips to the falls, game drives across the Buligi Peninsula, and birdwatching. The iconic shoebill and other rare species can be spotted along the riverbanks and in the Kaniyo Pabidi Forest.",
     image: murchison,
   },
   {
     name: "Lake Mburo National Park",
     description:
-      "This compact jewel of a park is ideally placed for an overnight break bewteen kampala and the protected areas of western Uganda. Herbivores in the seasonal wetland valleys and acacia grasslands that sorround Lake Mburo include species such as topi, eland and zebra that are rare or absent from other parks in Uganda. With 332 species recorded, birding is also rewarding with papyrus and acacia species beeing particularly well represented. Visitors need not limit themselves to game drives; the park can also be explored using mountain bikes, by boat, on foot, and on horseback.",
+      "Lake Mburo National Park is a compact gem, ideally located for a break between Kampala and Uganda’s western protected areas. Despite its small size, the park is home to unique wildlife such as zebras, elands, and topis. It also boasts 332 recorded bird species, making it a paradise for birdwatchers. Visitors can explore the park through game drives, boat rides, mountain biking, horseback riding, and nature walks. The park’s diverse habitats, including acacia woodlands and seasonal wetlands, offer a rich and rewarding experience.",
     image: mburo,
   },
   {
     name: "Kidepo Valley National Park",
     description:
-      "Located in Uganda’s distant northerneastern corner, close to Kenya and South Sudan and forming the farthest extremity of the remote, sparsely populated Karamoja region, Kidepo represents one of Africa’s most magnificient wilderness. Big game favourites, including elephant, buffalo, giraffe, zebra, eland, lion, cheetah and ostrich, roam grasslands that extend towrds distant mountain ranges in all directions. This is also an atea of rich cultural interest for the plains beyond the park are dotted with the manyattas (homesteads) of the traditional Karamojong pastroralists.The fastest route to Kidepo is by air but with security assured in northern Uganda and Karamoja, overland travel has gained popularity.  Thanks to the  road improvements in the region, growing numbers of visitors are exploring an exciting new northeastern safari circuit including Murchison, Kidepo, Karamoja, Pian-Upe and Mount Elgon. ",
+      "Kidepo Valley National Park, located in Uganda’s remote northeastern corner, is a true wilderness gem. The park’s vast grasslands are home to an array of big game, including elephants, lions, cheetahs, and giraffes. The scenic landscapes, framed by distant mountain ranges, provide a stunning backdrop for wildlife viewing. Kidepo is also culturally significant, with traditional Karamojong manyattas dotting the plains. Visitors can explore the park by air or via improved overland routes, discovering an untouched and awe-inspiring part of Africa.",
     image: kidepo,
   },
   {
     name: "Semliki National Park",
     description:
-      "The forested 220 km2 Semliki National Park occupies an isolated slice of Ugandan territory beyond the Rwenzori mountain on the broad floor of the Albertine Rift Valley. Thanks to its great age (it predates the last Ice Age) and links with the Congo Guinea biome (Semliki represents the easternmost extent of the Congo’s huge Ituri Forest). The park contains an exceptionally rich and varied biodiversity. The forest is particularly exciting for birdwatchers with 441 recorded species that include 216 forest birds and 80 Central African  species found in few, if any, other forests in East Arica. Black dwarf hornbill, Shining blue kingfisher, Nkulenge rail and yellow-throated nicator are just a few random highlights cited by the park’s experienced guides. Nor will primatologists be disappointed either; an astonishing 15 species of primate can be found within 6 km of the primeval hot springs that bubble out of the rift valley floor near the park’s tourism office at Sempaya.",
+      "Semliki National Park, a forested 220km2 sanctuary, lies beyond the Rwenzori Mountains in the Albertine Rift Valley. It represents the easternmost extension of the Congo’s Ituri Forest, offering an exceptionally rich biodiversity. The park is a haven for birdwatchers, with 441 recorded species, including 80 Central African species rarely seen elsewhere in East Africa. Primatologists will find 15 primate species within proximity of the primeval hot springs near the park’s tourism office at Sempaya. It’s a fascinating destination for nature enthusiasts.",
     image: semiliki,
   },
 ];
