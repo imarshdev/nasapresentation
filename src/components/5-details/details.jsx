@@ -81,7 +81,6 @@ export default function Details({ isMobile }) {
   const constactStyle = {
     width: "100%",
     display: "flex",
-    justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
     textAlign: "center",

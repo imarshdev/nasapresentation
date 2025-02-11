@@ -61,7 +61,6 @@ export function FilterContainer({ isMobile }) {
     marginTop: "-5rem",
     zIndex: 4,
     boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.3)",
-    display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
   };
