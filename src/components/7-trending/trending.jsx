@@ -3,7 +3,7 @@ import { Sidebar } from "primereact/sidebar";
 
 export default function Trending({ isMobile }) {
   const [sipiOpen, setSipiOpen] = useState(false);
-  const [wagagaiOpen, setWagagaiOpen] = useState(true);
+  const [wagagaiOpen, setWagagaiOpen] = useState(false);
   const wrapperStyle = {
     width: "100%",
     display: "flex",

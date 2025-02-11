@@ -9,7 +9,7 @@ import Items from "./components/3-locationItems/items";
 import Details from "./components/5-details/details";
 import AboutUs from "./components/5-aboutUs/about";
 import ContactBanner from "./components/7-contactUs/contact";
-import Trending from "./components/7-Trending/trending";
+import Trending from "@components/7-trending/Trending";
 import All from "./components/7-All/all";
 
 function App() {
