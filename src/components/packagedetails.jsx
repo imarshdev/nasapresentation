@@ -80,7 +80,7 @@ const WagagaiTourDetails = ({ setIsOpen }) => {
   );
 };
 
-export const SipiTourDetails = ({ setIsOpen }) => {
+export function SipiTourDetails({ setIsOpen }) {
   return (
     <div style={styles.container}>
       <button onClick={() => setIsOpen(false)} style={styles.backButton}>← Back</button>
