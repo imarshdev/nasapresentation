@@ -9,6 +9,8 @@ import Items from "./components/3-locationItems/items";
 import Details from "./components/5-details/details";
 import AboutUs from "./components/5-aboutUs/about";
 import ContactBanner from "./components/7-contactUs/contact";
+import Trending from "./components/7-Trending/trending";
+import All from "./components/7-All/all";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false); // Track mobile screen size
@@ -45,12 +47,16 @@ function App() {
             <Banner isMobile={isMobile} />
             <FilterContainer isMobile={isMobile} />
             <Items isMobile={isMobile} />
-            <Packages isMobile={isMobile} />
+            <Trending isMobile={isMobile} />
             <Details isMobile={isMobile} />
             <ContactBanner isMobile={isMobile} />
           </>
         )}
         {page === "about" && <AboutUs isMobile={isMobile} />}
+        {page === "tours" && <All isMobile={isMobile} />}
+        {page === "destinations" && (
+          <Packages page={page} isMobile={isMobile} />
+        )}
       </div>
     </PrimeReactProvider>
   );

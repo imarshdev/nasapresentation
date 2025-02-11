@@ -119,7 +119,7 @@ export default function Overlay({ visible, setVisible, isMobile, setPage }) {
             <div style={topperStyle}>
               <span style={smallSpan}>Home</span>
               <span style={smallSpan}>About</span>
-              <span style={smallSpan}>Tours</span>
+              <span style={smallSpan}>Packages</span>
               <span style={smallSpan}>Close</span>
             </div>
           </>

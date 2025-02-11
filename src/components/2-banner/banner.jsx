@@ -1,9 +1,6 @@
-import { CiLocationArrow1, CiLocationOn, CiViewTimeline } from "react-icons/ci";
+import { CiLocationOn } from "react-icons/ci";
 import mountain from "../../assets/backdrop.png";
-import { GiCornerFlag } from "react-icons/gi";
-import { FaPeopleRobbery } from "react-icons/fa6";
 import FadeInView from "../../assets/fadein/fadein";
-import { BiCalendarEvent } from "react-icons/bi";
 
 export default function Banner({ isMobile }) {
   // Styles
@@ -79,7 +76,6 @@ export function FilterContainer({ isMobile }) {
     marginTop: "-5rem",
     zIndex: 4,
     boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.3)",
-    display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
   };

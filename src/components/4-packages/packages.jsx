@@ -1,9 +1,5 @@
 import React from "react";
 import { TabView, TabPanel } from "primereact/tabview";
-import noimage from "../../assets/noimage.avif";
-import { CiStar } from "react-icons/ci";
-import { MdConnectingAirports } from "react-icons/md";
-import FadeInView from "../../assets/fadein/fadein";
 import elizabeth from "./imgs/elizabeth.jpg";
 import rwenzori from "./imgs/rwenzori.jpg";
 import elgon from "./imgs/elgon.jpg";
@@ -13,8 +9,9 @@ import mgahinga from "./imgs/mgahinga.jpg";
 import murchison from "./imgs/murchison.png";
 import semiliki from "./imgs/semiliki.jpg";
 import kidepo from "./imgs/kidepo.jpg";
+import ContactBanner from "../7-contactUs/contact";
 
-export default function Packages({ isMobile }) {
+export default function Packages({ isMobile, page }) {
   const headingStyle = {
     width: "100%",
     textAlign: isMobile ? "center" : "start",
@@ -81,38 +78,42 @@ export default function Packages({ isMobile }) {
   };
 
   return (
-    <div className="card">
-      <h2 style={headingStyle}>
-        <b>Explore Stays in Popular Packages!</b>
-      </h2>
-      <TabView style={{ padding: isMobile ? "0px" : "0 0px" }}>
-        <TabPanel header="Explore Uganda">
-          <div style={tabContainerStyle}>
-            {PackageItems.map((item) => (
-              <div key={item.name} style={cardStyle}>
-                <img
-                  src={item.image}
-                  style={{ height: "45%", width: "100%" }}
-                />
-                <span style={spanStylehead}>{item.name}</span>
-                <span style={spanStyle2}>{item.description}</span>
-                <span style={spanStyle}>See Packages</span>
-              </div>
-            ))}
-          </div>
-        </TabPanel>
-        <TabPanel header="Explore East Africa">
-          <div>
-            <p>hello</p>
-          </div>
-        </TabPanel>
-        <TabPanel header="International">
-          <div>
-            <p>hello</p>
-          </div>
-        </TabPanel>
-      </TabView>
-    </div>
+    <>
+      <div className="card">
+        {page == "destinations" ? <div style={{ height: "6rem" }} /> : <></>}
+        <h2 style={headingStyle}>
+          <b>Explore Stays in Popular Locations!</b>
+        </h2>
+        <TabView style={{ padding: isMobile ? "0px" : "0 0px" }}>
+          <TabPanel header="Explore Uganda">
+            <div style={tabContainerStyle}>
+              {PackageItems.map((item) => (
+                <div key={item.name} style={cardStyle}>
+                  <img
+                    src={item.image}
+                    style={{ height: "45%", width: "100%" }}
+                  />
+                  <span style={spanStylehead}>{item.name}</span>
+                  <span style={spanStyle2}>{item.description}</span>
+                  <span style={spanStyle}>See Packages</span>
+                </div>
+              ))}
+            </div>
+          </TabPanel>
+          <TabPanel header="Explore East Africa">
+            <div>
+              <p>hello</p>
+            </div>
+          </TabPanel>
+          <TabPanel header="International">
+            <div>
+              <p>hello</p>
+            </div>
+          </TabPanel>
+        </TabView>
+      </div>
+      <ContactBanner />
+    </>
   );
 }
 

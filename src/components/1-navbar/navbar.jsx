@@ -3,6 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import logo1 from "../../assets/logo1.png";
 import { MdMenuOpen } from "react-icons/md";
 import Overlay from "../overlay/overlay";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar({ isMobile, page, setPage }) {
   const [visible, setVisible] = useState(false);
@@ -53,8 +54,8 @@ export default function Navbar({ isMobile, page, setPage }) {
   const searchButtonStyle = {
     width: "10%",
     textAlign: "start",
-    backgroundColor: "orange",
-    height: "50%",
+    backgroundColor: "green",
+    height: "70%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -66,8 +67,8 @@ export default function Navbar({ isMobile, page, setPage }) {
   const searchButtonStyle2 = {
     width: "35%",
     textAlign: "start",
-    backgroundColor: "orange",
-    height: "50%",
+    backgroundColor: "green",
+    height: "70%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -116,7 +117,7 @@ export default function Navbar({ isMobile, page, setPage }) {
               style={navItemStyle("tours")}
               onClick={() => setPage("tours")}
             >
-              Tours
+              Packages
             </p>
             <p
               className="navitem"
@@ -129,14 +130,23 @@ export default function Navbar({ isMobile, page, setPage }) {
         )}
 
         {isMobile ? (
-          <p style={menuButtonStyle}>
-            <CiSearch size={20} />
-          </p>
+          <a
+            href={`https://wa.me/+256767116290`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={menuButtonStyle}
+          >
+            <FaWhatsapp size={20} />
+          </a>
         ) : (
-          <p style={isMobile ? searchButtonStyle2 : searchButtonStyle}>
-            <CiSearch style={{ marginRight: ".5rem" }} />
-            Search
-          </p>
+          <a
+            href={`https://wa.me/+256767116290`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={isMobile ? searchButtonStyle2 : searchButtonStyle}
+          >
+            <FaWhatsapp style={{ marginRight: ".5rem" }} /> WhatsApp
+          </a>
         )}
 
         <p style={menuButtonStyle} onClick={() => setVisible(true)}>
