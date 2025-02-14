@@ -102,12 +102,12 @@ export default function Packages({ isMobile, page }) {
           </TabPanel>
           <TabPanel header="Explore East Africa">
             <div>
-              <p>hello</p>
+              <p>TBA</p>
             </div>
           </TabPanel>
           <TabPanel header="International">
             <div>
-              <p>hello</p>
+              <p>TBA</p>
             </div>
           </TabPanel>
         </TabView>

@@ -21,7 +21,7 @@ export default function Items({ isMobile }) {
   ];
   const containerStyle = {
     width: "100%",
-    height: isMobile ? "20vh" : "30vh",
+    height: isMobile ? "40vh" : "50vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -39,11 +39,13 @@ export default function Items({ isMobile }) {
   const carouselItemStyle = {
     flex: "0 0 auto",
     width: isMobile ? "90%" : "23rem",
-    height: isMobile ? "15vh" : "20vh",
+    height: isMobile ? "30vh" : "35vh",
     margin: isMobile ? "5%" : "1rem",
     borderRadius: "20px",
     overflow: "hidden",
     display: "flex",
+    position: "relative",
+    cursor: "pointer",
   };
 
   return (
@@ -53,13 +55,19 @@ export default function Items({ isMobile }) {
           <div className="item" style={carouselItemStyle} key={key}>
             <div
               style={{
-                width: "50%",
-                height: "100%",
-                backgroundColor: "lightblue",
+                width: "80%",
+                height: "50%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "start",
                 flexDirection: "column",
+                position: "absolute",
+                borderRadius: "10px",
+                left: "5%",
+                top: "40%",
+                backdropFilter: "blur(3px)",
+                color: "#fff",
+                boxShadow: "1px 2px 5px #02020250",
               }}
             >
               <span className="phrase-text">{image.phrase}</span>
@@ -71,7 +79,7 @@ export default function Items({ isMobile }) {
             <img
               src={image.image}
               alt={image.phrase}
-              style={{ width: "50%", height: "100%", objectFit: "cover" }}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
         ))}

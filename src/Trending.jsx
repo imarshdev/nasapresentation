@@ -53,7 +53,9 @@ export default function Trending({ isMobile }) {
         </Sidebar>
 
         <div style={visaItem}>
-          <h2 style={styles.title}>Wagagai Tours & Travel: 6-Day Adventure</h2>
+          <h2 style={styles.title}>
+            Kampala and Murchison Falls: 6-Day Adventure
+          </h2>
           <p style={styles.description}>
             Experience the best of Uganda with this 6-day adventure, including
             Entebbe, Kampala, Murchison Falls, and a thrilling Nile River
@@ -98,6 +100,8 @@ export default function Trending({ isMobile }) {
               ))}
             </ul>
             <b style={{ fontSize: "13px" }}>{visa.price}</b>
+            <br />
+            <button style={styles.button}>Get Visa</button>
           </div>
         ))}
       </div>
@@ -108,7 +112,10 @@ export default function Trending({ isMobile }) {
           Locations.map((location, index) => (
             <div key={index} style={visaItem}>
               <h3>{location.name}</h3>
-              <p>{location.description}</p>
+              <p style={{ fontSize: "14px" }}>{location.description}</p>
+              <button>
+                <span>See Avavilable Packages</span>
+              </button>
             </div>
           ))
         ) : (
@@ -123,43 +130,30 @@ export default function Trending({ isMobile }) {
 
 const VisaServices = [
   {
-    name: "UAE Tourist Visa",
+    name: "30-Days Dubai Single Entry Visit Visa",
     description:
       "A short-term visa for travelers visiting the UAE for leisure, sightseeing, or visiting family.",
-    duration: "14, 30, or 60 days (single or multiple entry)",
+    duration: "30 days (single entry)",
     requirements: [
       "Valid passport (6 months validity)",
-      "Confirmed return ticket",
-      "Hotel booking or host details",
+      "Confirmed flight bookings",
       "Proof of funds",
+      "Hotel booking, invitation letters or host details",
     ],
-    price: "Shs. 1,000,000.00",
+    price: "$200 (Ugx 750,000)",
   },
   {
-    name: "Egypt Tourist Visa",
+    name: "60-Days Dubai Single Entry Visit Visa",
     description:
-      "A visa for travelers visiting Egypt for tourism, including sightseeing at historical sites like the pyramids.",
-    duration: "30 or 90 days (single or multiple entry)",
+      "A longer-term visa for travelers visiting the UAE for leisure, sightseeing, or visiting family.",
+    duration: "60 days (single entry)",
     requirements: [
       "Valid passport (6 months validity)",
-      "Travel itinerary",
-      "Hotel booking or host details",
+      "Confirmed flight bookings",
       "Proof of funds",
+      "Hotel booking, invitation letters or host details",
     ],
-    price: "Shs. 500,000.00",
-  },
-  {
-    name: "Kenya eVisa",
-    description:
-      "An electronic visa for tourists visiting Kenya for safaris, wildlife, and cultural experiences.",
-    duration: "90 days (single entry)",
-    requirements: [
-      "Valid passport",
-      "Return ticket",
-      "Proof of accommodation",
-      "Proof of funds",
-    ],
-    price: "Shs. 500,000.00",
+    price: "$327 (Ugx 1,200,000)",
   },
 ];
 const Locations = [
@@ -285,10 +279,6 @@ const styles = {
     cursor: "pointer",
     marginBottom: "15px",
   },
-  title: {
-    fontSize: "22px",
-    fontWeight: "bold",
-  },
   bookNowButton: {
     display: "block",
     width: "100%",
@@ -303,18 +293,25 @@ const styles = {
   },
 };
 
-
 const WagagaiTourDetails = ({ setIsOpen }) => {
   return (
     <div style={styles.container}>
-      <button onClick={() => setIsOpen(false)} style={styles.backButton}>← Back</button>
-      <h1 style={styles.title}>Wagagai Tours & Travel: 6-Day Adventure</h1>
-      <p><strong>Duration:</strong> 6 Days</p>
-      <p><strong>Price:</strong> $2,100 per traveler</p>
+      <button onClick={() => setIsOpen(false)} style={styles.backButton}>
+        ← Back
+      </button>
+      <h1 style={styles.title}>Kampala and Murchison Falls: 6-Day Adventure</h1>
+      <p>
+        <strong>Duration:</strong> 6 Days
+      </p>
+      <p>
+        <strong>Price:</strong> $2,100 per traveler
+      </p>
 
       <h2>Itinerary</h2>
       <ul>
-        <li><strong>Day 1:</strong> Arrival in Entebbe</li>
+        <li>
+          <strong>Day 1:</strong> Arrival in Entebbe
+        </li>
         <ul>
           <li>Arrive at Entebbe International Airport.</li>
           <li>Meet and greet with a Wagagai Tours representative.</li>
@@ -323,36 +320,50 @@ const WagagaiTourDetails = ({ setIsOpen }) => {
           <li>Welcome dinner and overnight stay in Entebbe.</li>
         </ul>
 
-        <li><strong>Day 2:</strong> Kampala City Tour</li>
+        <li>
+          <strong>Day 2:</strong> Kampala City Tour
+        </li>
         <ul>
           <li>Breakfast at the hotel.</li>
-          <li>Guided tour of Kampala, visiting the Uganda Museum and Kasubi Tombs.</li>
+          <li>
+            Guided tour of Kampala, visiting the Uganda Museum and Kasubi Tombs.
+          </li>
           <li>Lunch and cultural experience at Ndere Cultural Centre.</li>
           <li>Return to the hotel for dinner and overnight stay.</li>
         </ul>
 
-        <li><strong>Day 3:</strong> Murchison Falls National Park</li>
+        <li>
+          <strong>Day 3:</strong> Murchison Falls National Park
+        </li>
         <ul>
-          <li>Early breakfast and scenic drive to Murchison Falls National Park.</li>
+          <li>
+            Early breakfast and scenic drive to Murchison Falls National Park.
+          </li>
           <li>Picnic lunch and afternoon game drive.</li>
           <li>Check-in at the lodge and overnight stay.</li>
         </ul>
 
-        <li><strong>Day 4:</strong> Nile River Cruise & Safari</li>
+        <li>
+          <strong>Day 4:</strong> Nile River Cruise & Safari
+        </li>
         <ul>
           <li>Boat cruise along the Nile River to Murchison Falls.</li>
           <li>Lunch followed by an afternoon safari.</li>
           <li>Overnight stay at the lodge.</li>
         </ul>
 
-        <li><strong>Day 5:</strong> Return to Kampala</li>
+        <li>
+          <strong>Day 5:</strong> Return to Kampala
+        </li>
         <ul>
           <li>Breakfast and check-out from the lodge.</li>
           <li>Scenic drive back to Kampala with lunch en route.</li>
           <li>Farewell dinner and overnight stay in Kampala.</li>
         </ul>
 
-        <li><strong>Day 6:</strong> Departure</li>
+        <li>
+          <strong>Day 6:</strong> Departure
+        </li>
         <ul>
           <li>Breakfast and transfer to Entebbe International Airport.</li>
           <li>Optional visit to local craft markets.</li>
@@ -387,20 +398,44 @@ const WagagaiTourDetails = ({ setIsOpen }) => {
 const SipiTourDetails = ({ setIsOpen }) => {
   return (
     <div style={styles.container}>
-      <button onClick={() => setIsOpen(false)} style={styles.backButton}>← Back</button>
+      <button onClick={() => setIsOpen(false)} style={styles.backButton}>
+        ← Back
+      </button>
       <h1 style={styles.title}>7-Day Tour: Sipi Falls & Wagagai Peak Hiking</h1>
-      <p><strong>Duration:</strong> 7 Days</p>
-      <p><strong>Price:</strong> $800 (UGX 3,040,000) per person</p>
+      <p>
+        <strong>Duration:</strong> 7 Days
+      </p>
+      <p>
+        <strong>Price:</strong> $800 (UGX 3,040,000) per person
+      </p>
 
       <h2>Itinerary</h2>
       <ul>
-        <li><strong>Day 1:</strong> Arrival in Entebbe – Airport pickup, hotel check-in, and optional tour.</li>
-        <li><strong>Day 2:</strong> Travel to Sipi Falls – Scenic drive via Jinja & Mbale.</li>
-        <li><strong>Day 3:</strong> Hike the 3 major waterfalls of Sipi Falls.</li>
-        <li><strong>Day 4:</strong> Hike from Kapkwai to Mude Cave Camp.</li>
-        <li><strong>Day 5:</strong> Summit Wagagai Peak (4,321m) & return to Mude Camp.</li>
-        <li><strong>Day 6:</strong> Descend to Kapkwai & return to Kapchorwa/Mbale.</li>
-        <li><strong>Day 7:</strong> Return to Kampala.</li>
+        <li>
+          <strong>Day 1:</strong> Arrival in Entebbe – Airport pickup, hotel
+          check-in, and optional tour.
+        </li>
+        <li>
+          <strong>Day 2:</strong> Travel to Sipi Falls – Scenic drive via Jinja
+          & Mbale.
+        </li>
+        <li>
+          <strong>Day 3:</strong> Hike the 3 major waterfalls of Sipi Falls.
+        </li>
+        <li>
+          <strong>Day 4:</strong> Hike from Kapkwai to Mude Cave Camp.
+        </li>
+        <li>
+          <strong>Day 5:</strong> Summit Wagagai Peak (4,321m) & return to Mude
+          Camp.
+        </li>
+        <li>
+          <strong>Day 6:</strong> Descend to Kapkwai & return to
+          Kapchorwa/Mbale.
+        </li>
+        <li>
+          <strong>Day 7:</strong> Return to Kampala.
+        </li>
       </ul>
 
       <h2>Inclusions</h2>
