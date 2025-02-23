@@ -89,7 +89,9 @@ export default function Trending({ isMobile }) {
         </Sidebar>
 
         <div style={visaItem}>
-          <h2 style={styles.title}>9 days Uganda Wildlife Vacation</h2>
+          <h2 style={styles.title}>
+            9 Days Uganda Wildlife Vacation <br /> {"."}
+          </h2>
           <p style={styles.description}>
             Embark on a thrilling Uganda safari: gorillas, chimps, wildlife, and
             breathtaking scenery in a customized adventure of a lifetime
