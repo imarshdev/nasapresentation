@@ -1,7 +1,7 @@
 import React from "react";
 import { styles } from "../trendingitems";
 import { TiArrowBack } from "react-icons/ti";
-import Elizabeth from "../assets/trendingImages/image.png";
+import Elgon from "../assets/trendingImages/elgon.png";
 
 const SipiTourDetails = ({ setIsOpen }) => {
   const itinerary = [
@@ -234,7 +234,7 @@ const SipiTourDetails = ({ setIsOpen }) => {
       <button style={styles.goBack} onClick={() => setIsOpen(false)}>
         <TiArrowBack size="30" />
       </button>
-      <img src={Elizabeth} style={{ width: "100%" }} />
+      <img src={Elgon} style={{ width: "100%" }} />
       <div style={styles.container}>
         <h1>7-Day Sipi Falls & Wagagai Peak Hiking Tour</h1>
         {itinerary.map((day) => (

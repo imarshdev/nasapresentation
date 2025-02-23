@@ -1,6 +1,6 @@
 import React from "react";
 import { TiArrowBack } from "react-icons/ti";
-import Elizabeth from "../assets/trendingImages/9days.png";
+import Kibale from "../assets/trendingImages/kibale.png";
 import { styles } from "../trendingitems";
 
 const QueenElizabethTour = ({ setIsOpen }) => {
@@ -224,7 +224,7 @@ const QueenElizabethTour = ({ setIsOpen }) => {
       <button style={styles.goBack} onClick={() => setIsOpen(false)}>
         <TiArrowBack size={30} />
       </button>
-      <img src={Elizabeth} style={{ width: "100%" }} />
+      <img src={Kibale} style={{ width: "100%" }} />
       <div style={styles.container}>
         <h1>9 Days Uganda Wildlife Vacation</h1>
         <p>

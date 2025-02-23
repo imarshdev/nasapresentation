@@ -1,7 +1,7 @@
 import React from "react";
 import { TiArrowBack } from "react-icons/ti";
 import { styles } from "../trendingitems";
-import TourImage from "../assets/trendingImages/image.png";
+import TourImage from "../assets/trendingImages/murchison.png";
 
 const KampalaMurchisonTour = ({ setIsOpen }) => {
   const itinerary = [
