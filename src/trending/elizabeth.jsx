@@ -1,6 +1,6 @@
 import React from "react";
 import { TiArrowBack } from "react-icons/ti";
-import Elizabeth from "../assets/trendingImages/image.png";
+import Elizabeth from "../assets/trendingImages/9days.png";
 import { styles } from "../trendingitems";
 
 const QueenElizabethTour = ({ setIsOpen }) => {
@@ -226,7 +226,7 @@ const QueenElizabethTour = ({ setIsOpen }) => {
       </button>
       <img src={Elizabeth} style={{ width: "100%" }} />
       <div style={styles.container}>
-        <h1>8-Day Queen Elizabeth Heritage Tour Itinerary</h1>
+        <h1>9 Days Uganda Wildlife Vacation</h1>
         <p>
           This Uganda wildlife Vacation Safari takes you on a gratifying journey
           to see gorillas, chimps, and the abundant wildlife in Uganda’s wild
