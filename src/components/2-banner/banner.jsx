@@ -1,5 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
-import mountain from "../../assets/backdrop.png";
+import banner from "../../assets/banner.png";
+import mountain2 from "../../assets/backdrop2.jpg";
 import FadeInView from "../../assets/fadein/fadein";
 
 export default function Banner({ isMobile }) {
@@ -29,21 +30,29 @@ export default function Banner({ isMobile }) {
 
   return (
     <div style={containerStyle}>
-      <img src={mountain} style={imageStyle} />
-      <div style={textStyle}>
-        <span>
-          <b
-            className="font-item"
-            style={{ fontSize: isMobile ? "3rem" : "7rem", margin: 0 }}
-          >
-            WAGAGAI
-            <br />
-            <span style={{ fontSize: isMobile ? "2rem" : "5rem", margin: "0" }}>
-              TOURS & TRAVEL
+      {isMobile ? (
+        <>
+          <img src={banner} style={imageStyle} />
+          <div style={textStyle}>
+            <span>
+              <b
+                className="font-item"
+                style={{ fontSize: isMobile ? "3rem" : "7rem", margin: 0 }}
+              >
+                WAGAGAI
+                <br />
+                <span
+                  style={{ fontSize: isMobile ? "2rem" : "5rem", margin: "0" }}
+                >
+                  TOURS & TRAVEL
+                </span>
+              </b>
             </span>
-          </b>
-        </span>
-      </div>
+          </div>
+        </>
+      ) : (
+        <img src={mountain2} style={imageStyle} />
+      )}
       <br />
     </div>
   );
@@ -58,7 +67,7 @@ export function FilterContainer({ isMobile }) {
     display: "flex",
     margin: "0 5%",
     boxSizing: "border-box",
-    marginTop: "-5rem",
+    marginTop: "-6rem",
     zIndex: 4,
     boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.3)",
     flexWrap: "wrap",

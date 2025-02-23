@@ -131,7 +131,7 @@ export default function Navbar({ isMobile, page, setPage }) {
 
         {isMobile ? (
           <a
-            href={`https://wa.me/+256767116290`}
+            href={`https://wa.me/+256740053621`}
             target="_blank"
             rel="noopener noreferrer"
             style={menuButtonStyle}
@@ -140,7 +140,7 @@ export default function Navbar({ isMobile, page, setPage }) {
           </a>
         ) : (
           <a
-            href={`https://wa.me/+256767116290`}
+            href={`https://wa.me/+256740053621`}
             target="_blank"
             rel="noopener noreferrer"
             style={isMobile ? searchButtonStyle2 : searchButtonStyle}
