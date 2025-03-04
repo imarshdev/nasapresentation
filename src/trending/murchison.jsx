@@ -212,7 +212,13 @@ const KampalaMurchisonTour = ({ setIsOpen }) => {
         <p>
           <strong>US $2,100 / traveler</strong>
         </p>
-        <button style={styles.bookNowButton}>Book Now</button>
+        <a
+          href={`https://wa.me/+256740053621`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button style={styles.bookNowButton}>Book Now</button>
+        </a>
       </div>
     </div>
   );

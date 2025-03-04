@@ -89,16 +89,16 @@ export default function Trending({ isMobile }) {
 
         <div style={visaItem}>
           <h2 style={styles.title}>
-            9 Days Uganda Wildlife Vacation <br /> {"."}
+            9 Days Uganda Wildlife Vacation <br />
           </h2>
           <p style={styles.description}>
             Embark on a thrilling Uganda safari: gorillas, chimps, wildlife, and
             breathtaking scenery in a customized adventure of a lifetime
           </p>
           <ul style={styles.list}>
-            <li>🌍 Explore Entebbe & Kampala</li>
-            <li>🦓 Murchison Falls Safari</li>
-            <li>🚤 Nile River Cruise</li>
+            <li>Gorilla Trekking in Bwindi Impenetrable National Park </li>
+            <li>Chimpanzee Tracking in Kibale Forest National Park </li>
+            <li>Wildlife Safaris in Queen Elizabeth National Park </li>
           </ul>
           <p style={styles.price}>From $4,100 per traveler</p>
           <button onClick={() => setElizabethOpen(true)} style={styles.button}>
@@ -136,7 +136,13 @@ export default function Trending({ isMobile }) {
             </ul>
             <b style={{ fontSize: "13px" }}>{visa.price}</b>
             <br />
-            <button style={styles.button}>Get Visa</button>
+            <a
+              href={`https://wa.me/+256740053621`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button style={styles.button}>Get Visa</button>
+            </a>
           </div>
         ))}
       </div>

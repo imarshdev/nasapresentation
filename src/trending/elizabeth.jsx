@@ -274,7 +274,13 @@ const QueenElizabethTour = ({ setIsOpen }) => {
           We hope you enjoy your time with Wagagai Tours & Travel and create
           memories that will last a lifetime. Safe travels!
         </p>
-        <button style={styles.bookNowButton}>Book Now</button>
+        <a
+          href={`https://wa.me/+256740053621`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button style={styles.bookNowButton}>Book Now</button>
+        </a>
       </div>
     </div>
   );

@@ -295,7 +295,13 @@ const SipiTourDetails = ({ setIsOpen }) => {
 
         <h2>Package Price</h2>
         <p>$800 (UGX 3,040,000) per person.</p>
-        <button style={styles.bookNowButton}>Book Now</button>
+        <a
+          href={`https://wa.me/+256740053621`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button style={styles.bookNowButton}>Book Now</button>
+        </a>
       </div>
     </div>
   );
